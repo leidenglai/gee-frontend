@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "src/*": ["src/*"],
+      "assets/*": ["src/assets/*"],
+      "containers/*": ["src/containers/*"],
+      "utils/*": ["src/utils/*"],
+      "HOC/*": ["src/HOC/*"],
+      "stores/*": ["src/stores/*"],
+      "services/*": ["src/services/*"],
+      "tpl/*": ["src/tpl/*"],
+      "components/*": ["src/components/*"]
+    },
+    "experimentalDecorators": true
+  },
+  "exclude": ["node_modules"]
+}

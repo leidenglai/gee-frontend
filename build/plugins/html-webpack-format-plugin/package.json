@@ -1,0 +1,35 @@
+{
+  "name": "html-webpack-format-plugin",
+  "version": "1.0.0",
+  "description": "格式化由underscore-template-loader等模板系统生成的html代码，让html-webpack-plugin输出的Html文件更加美观",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leidenglai/html-webpack-format-plugin.git"
+  },
+  "keywords": [
+    "webpack",
+    "plugin",
+    "html-webpack-plugin",
+    "underscore-template-loader",
+    "format"
+  ],
+  "author": "Xiaolei <leidenglai@qq.com> (https://github.com/leidenglai)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leidenglai/html-webpack-format-plugin/issues"
+  },
+  "homepage": "https://github.com/leidenglai/html-webpack-format-plugin",
+  "dependencies": {
+    "rehype": "^7.0.0",
+    "hast-util-embedded": "^1.0.1",
+    "hast-util-phrasing": "^1.0.0",
+    "html-whitespace-sensitive-tag-names": "^1.0.0",
+    "rehype-minify-whitespace": "^2.0.0",
+    "repeat-string": "^1.5.4",
+    "unist-util-visit-parents": "^2.0.0"
+  }
+}

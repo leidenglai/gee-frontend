@@ -1,0 +1,18 @@
+{
+  "presets": ["@babel/preset-typescript"],
+  "plugins": [
+    "add-module-exports",
+    "@babel/plugin-transform-runtime",
+    ["@babel/plugin-proposal-class-properties", {"loose": true}],
+    "@babel/plugin-proposal-object-rest-spread",
+    "lodash"
+  ],
+  "env": {
+    "development": {
+      "presets": [["@babel/preset-env", {"targets": {"browsers": "last 1 Chrome versions"}}]]
+    },
+    "production": {
+      "presets": [["@babel/env", {"targets": {"browsers": ["last 2 versions", "ie >= 11"]}}]]
+    }
+  }
+}
