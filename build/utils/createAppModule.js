@@ -34,7 +34,7 @@ const fs = require('fs')
 function handleModuleList(filePath, options = {}) {
   const moduleMap = new Set()
   // 去掉路由两端的斜线
-  const liveList = (options.lives || []).map(item => item.replace(/^([/]{1})/, '').replace(/([/]{1})$/, ''))
+  const liveList = (options.lives || []).map(item => item.replace(/^([\\/]{1})/, '').replace(/([\\/]{1})$/, ''))
 
   function fileDisplay(_path) {
     // 根据文件路径读取文件，返回文件列表
@@ -55,7 +55,7 @@ function handleModuleList(filePath, options = {}) {
       }
 
       if (isFile && filename === 'html.js') {
-        const regPath = /[/]{1}([0-9a-zA-Z]+)$/.exec(_path)
+        const regPath = /[\\/]{1}([0-9a-zA-Z]+)$/.exec(_path)
         const lastPath = regPath && regPath[1] // / 路径最后一节
         const router = _path.replace(filePath, '').slice(1)
         // 保留顶级目录部分

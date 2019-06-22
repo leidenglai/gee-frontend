@@ -10,7 +10,7 @@ const options = {
     aggregateTimeout: 300
   },
   host: '127.0.0.1',
-  port: 5000
+  port: 7010
 }
 
 WebpackDevServer.addDevServerEntrypoints(newConf, options)
@@ -19,7 +19,7 @@ newConf.plugins.concat([reloadHtml])
 const compiler = webpack(newConf)
 const server = new WebpackDevServer(compiler, options)
 
-server.listen(5000, '127.0.0.1', err => {
+server.listen(7010, '127.0.0.1', err => {
   err && console.log(err)
 })
 

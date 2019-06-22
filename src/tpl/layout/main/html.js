@@ -19,11 +19,14 @@ const moduleExports = {
 
   /* 整合各公共组件和页面实际内容，最后生成完整的HTML文档 */
   run(content) {
-    const renderData = {
-      header: header(componentRenderData),
-      footer: footer(componentRenderData),
-      content
-    }
+    const renderData = Object.assign(
+      {
+        header: header(componentRenderData),
+        footer: footer(componentRenderData),
+        content
+      },
+      componentRenderData
+    )
 
     return layout(renderData)
   }
