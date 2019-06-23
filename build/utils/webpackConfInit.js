@@ -11,7 +11,7 @@ const appModule = createAppModule(path.join(rootPath, 'src/tpl/pages'), custAppM
 
 function tplOptionConstructor(modItem, commonChunks) {
   const options = {
-    filename: `${mode === 'production' ? '../' : ''}${modItem.router}.html`,
+    filename: `${mode === 'production' ? '../pages/' : ''}${modItem.router}.html`,
     chunksSortMode: 'dependency',
     minify: false
   }

@@ -68,9 +68,6 @@ function handleModuleList(filePath, options = {}) {
         const controller = lastPath === router ? 'index' : lastPath
         const live = liveList.length <= 0 ? false : !!~liveList.indexOf(router)
 
-        console.log(liveList)
-        console.log(router)
-
         moduleMap.add({
           module: module ? module : controller,
           controller,

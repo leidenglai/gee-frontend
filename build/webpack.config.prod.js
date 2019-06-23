@@ -13,7 +13,7 @@ const rootPath = path.resolve(__dirname, '..') // 项目根目录
 const fileHash = version || '[chunkhash:6]'
 
 // 公共第三方模块
-const vendor = ['@babel/polyfill', '@babel/runtime', 'classnames', 'jquery', 'delegate', 'lodash', 'query-string', 'uikit', 'whatwg-fetch']
+const vendor = ['@babel/polyfill', '@babel/runtime', 'classnames', 'jquery', 'lodash', 'query-string', 'uikit', 'whatwg-fetch']
 
 config.mode = 'production'
 config.output.filename = `[name].${fileHash}.js`
