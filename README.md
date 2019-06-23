@@ -96,3 +96,14 @@ npm start 执行 build/dev.js，启动 webpack 构建开发环境等等。通过
 ### 入口文件
 
 入口文件的 配置逻辑在 webpack 的 build/utils/中，js 入口 src/containers/\* ，每一个文件夹代表一个模块。
+
+所有的入口文件的导出都应该实例化导出
+
+```javascript
+class SignPage {
+  // ...
+}
+
+// 重点 入口文件导出必须实例化运行，否则js未执行
+export default new SignPage()
+```

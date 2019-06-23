@@ -5,6 +5,7 @@ const footer = require('tpl/section/footer/index.html') // 页脚的模板
 /* 整理渲染公共部分所用到的模板变量 */
 const componentRenderData = {
   title: 'Title',
+  description: 'SEO description',
   bodyClass: 'fixed-layout-body'
 }
 

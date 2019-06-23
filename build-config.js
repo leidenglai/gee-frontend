@@ -10,7 +10,7 @@ const cdnPath = '/static/'
  * @type {Options}
  */
 const custAppModule = {
-  lives: ['home']
+  lives: ['home', 'account/login']
 }
 
 module.exports = {

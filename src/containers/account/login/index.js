@@ -2,9 +2,9 @@ import AppMain from 'containers/main'
 import './style.less'
 
 /**
- * 页面入口：数据集
+ * 页面入口: 登陆
  */
-class DatasetsPage extends AppMain {
+class LoginPage extends AppMain {
   constructor() {
     super()
 
@@ -27,4 +27,4 @@ class DatasetsPage extends AppMain {
   // 其他逻辑
 }
 
-export default new DatasetsPage()
+export default new LoginPage()

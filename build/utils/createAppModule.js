@@ -56,12 +56,20 @@ function handleModuleList(filePath, options = {}) {
 
       if (isFile && filename === 'html.js') {
         const regPath = /[\\/]{1}([0-9a-zA-Z]+)$/.exec(_path)
-        const lastPath = regPath && regPath[1] // / 路径最后一节
-        const router = _path.replace(filePath, '').slice(1)
+        // 路径最后一节
+        const lastPath = regPath && regPath[1]
+        // 取出路由，同时将路径中的 '\' 替换成 '/'
+        const router = _path
+          .replace(filePath, '')
+          .slice(1)
+          .replace(/\\/g, '/')
         // 保留顶级目录部分
         const module = lastPath === router ? router : router.replace(lastPath, '').slice(0, -1)
         const controller = lastPath === router ? 'index' : lastPath
         const live = liveList.length <= 0 ? false : !!~liveList.indexOf(router)
+
+        console.log(liveList)
+        console.log(router)
 
         moduleMap.add({
           module: module ? module : controller,

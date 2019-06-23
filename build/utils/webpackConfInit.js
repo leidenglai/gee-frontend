@@ -3,7 +3,7 @@ const _ = require('lodash')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HtmlWebpackFormatPlugin = require('../plugins/html-webpack-format-plugin')
 const createAppModule = require('./createAppModule')
-const { custAppModule } = require('../../config.js')
+const { custAppModule } = require('../../build-config.js')
 
 const rootPath = path.resolve(__dirname, '../../')
 const mode = process.env.NODE_ENV.trim()

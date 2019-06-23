@@ -1,4 +1,4 @@
-import AppMain from '../main'
+import AppMain from 'containers/main'
 import './style.less'
 
 /**
@@ -27,4 +27,4 @@ class HomePage extends AppMain {
   // 其他逻辑
 }
 
-export default HomePage
+export default new HomePage()

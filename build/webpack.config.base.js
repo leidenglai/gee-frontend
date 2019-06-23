@@ -1,6 +1,6 @@
 const path = require('path')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
-const { cdnPath } = require('../config')
+const { cdnPath } = require('../build-config')
 
 const commonPath = {
   dist: path.resolve(__dirname, '../dist/static') // build 后输出目录
