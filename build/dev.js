@@ -1,7 +1,7 @@
 const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
 const config = require('./webpack.config.dev')
-const webpackConfInit = require('./utils/webpackConfInit')
+const webpackConfInit = require('./webpack-init')
 
 const newConf = webpackConfInit(config)
 const options = {

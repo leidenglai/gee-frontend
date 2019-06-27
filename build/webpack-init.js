@@ -1,11 +1,11 @@
 const path = require('path')
 const _ = require('lodash')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const HtmlWebpackFormatPlugin = require('../plugins/html-webpack-format-plugin')
-const createAppModule = require('./createAppModule')
-const { custAppModule } = require('../../build-config.js')
+const HtmlWebpackFormatPlugin = require('./plugins/html-webpack-format-plugin')
+const createAppModule = require('./utils/createAppModule')
+const { custAppModule } = require('../build-config.js')
 
-const rootPath = path.resolve(__dirname, '../../')
+const rootPath = path.resolve(__dirname, '../')
 const mode = process.env.NODE_ENV.trim()
 const appModule = createAppModule(path.join(rootPath, 'src/tpl/pages'), custAppModule)
 
@@ -32,7 +32,7 @@ function tplOptionConstructor(modItem, commonChunks) {
  * 添加entry 和 HtmlWebpackPlugin
  * @param {webpack.Configuration} webpack config
  */
-function webpackConfInit(config) {
+function webpackInit(config) {
   const commonChunks = ['manifest', ..._.map(_.get(config, 'optimization.splitChunks.cacheGroups', []), (v, k) => k)]
   const entry = {}
   const htmlWebpackList = []
@@ -65,4 +65,4 @@ function webpackConfInit(config) {
   return config
 }
 
-module.exports = webpackConfInit
+module.exports = webpackInit
