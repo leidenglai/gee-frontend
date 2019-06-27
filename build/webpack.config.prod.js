@@ -78,6 +78,14 @@ config.optimization = {
         },
         chunks: 'initial',
         priority: 99
+      },
+      // 其他公共文件
+      default: {
+        name: 'default',
+        filename: '[name].[chunkhash:6].js',
+        minChunks: 3,
+        priority: -20,
+        reuseExistingChunk: true
       }
     }
   },

@@ -2,9 +2,9 @@ import AppMain from 'containers/main'
 import './style.less'
 
 /**
- * 页面入口: 注册
+ * 页面入口: 算法
  */
-class SignUpPage extends AppMain {
+class AlgorithmPage extends AppMain {
   constructor() {
     super()
 
@@ -27,4 +27,4 @@ class SignUpPage extends AppMain {
   // 其他逻辑
 }
 
-export default new SignUpPage()
+export default new AlgorithmPage()

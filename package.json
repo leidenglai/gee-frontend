@@ -55,7 +55,7 @@
     "rucksack-css": "^0.9.1",
     "style-loader": "^0.13.1",
     "stylelint": "^9.10.1",
-    "stylelint-config-standard": "^18.2.0",
+    "stylelint-config-standard": "^18.3.0",
     "typescript": "^3.3.3",
     "uglifyjs-webpack-plugin": "^2.1.2",
     "underscore-template-loader": "^1.0.0",
