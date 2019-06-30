@@ -6,7 +6,7 @@ import './style.less'
  */
 class SignUpPage extends AppMain {
   constructor() {
-    super()
+    super({ name: 'signup' })
 
     this.init()
     this.bind()

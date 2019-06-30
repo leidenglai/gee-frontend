@@ -6,7 +6,7 @@ import './style.less'
  */
 class LoginPage extends AppMain {
   constructor() {
-    super()
+    super({ name: 'login' })
 
     this.init()
     this.bind()

@@ -6,7 +6,7 @@ import './style.less'
  */
 class AlgorithmPage extends AppMain {
   constructor() {
-    super()
+    super({ name: 'algorithm' })
 
     this.init()
     this.bind()

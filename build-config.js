@@ -12,12 +12,12 @@ const cdnPath = '/static/'
  */
 const custAppModule = {
   lives: [
-    'home',
-    'account/login'
+    // 'home',
+    'account/login',
     // 'account/signup',
     // 'about',
     // 'algorithm',
-    // 'datasets',
+    'datasets'
     // 'order',
   ]
 }

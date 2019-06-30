@@ -1,4 +1,5 @@
 import AppMain from 'containers/main'
+import testTpl from './tpl/test.html'
 import './style.less'
 
 /**
@@ -6,7 +7,7 @@ import './style.less'
  */
 class DatasetsPage extends AppMain {
   constructor() {
-    super()
+    super({ name: 'datasets' })
 
     this.init()
     this.bind()
@@ -17,6 +18,14 @@ class DatasetsPage extends AppMain {
    */
   init() {
     // 请求初始数据，初始化页面等
+
+    // 加载模版
+    const testHtml = testTpl({
+      title: 'Test ',
+      list: ['1', '2', '3']
+    })
+
+    this.moduleDom.find('.test-card-box').html(testHtml)
   }
 
   /**

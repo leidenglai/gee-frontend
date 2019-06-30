@@ -1,6 +1,7 @@
 const path = require('path')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 const { cdnPath } = require('../build-config')
+const webpack = require('webpack')
 
 const commonPath = {
   dist: path.resolve(__dirname, '../dist/static') // build 后输出目录
@@ -71,6 +72,14 @@ module.exports = {
     ]
   },
   plugins: [
-    new ProgressBarPlugin() // 进度条
+    new ProgressBarPlugin(), // 进度条
+
+    // 将jquery暴露到全局作用域
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      jquery: 'jquery',
+      'window.jQuery': 'jquery'
+    })
   ]
 }
