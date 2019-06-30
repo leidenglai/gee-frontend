@@ -35,7 +35,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.html$/,
+        test: /(\.tpl)?\.html$/,
         use: [
           {
             loader: 'underscore-template-loader',

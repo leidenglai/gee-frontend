@@ -3,13 +3,12 @@ const config = require('./webpack.config.base')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const rucksack = require('rucksack-css')
 const autoprefixer = require('autoprefixer')
-const SOURCE_MAP = true
 
 config.mode = 'development'
 config.output.publicPath = '/'
 config.output.filename = '[name].js'
 config.output.chunkFilename = '[id].js'
-config.devtool = SOURCE_MAP ? 'cheap-module-eval-source-map' : false
+config.devtool = 'cheap-module-eval-source-map'
 
 // 开发环境下直接内嵌 CSS 以支持热替换
 // modifyVars 替换默认主题
@@ -56,11 +55,7 @@ config.plugins.push(
     // 配置开发全局常量
     // ================================
     __DEV__: true,
-    __PROD__: false,
-    'process.env': {
-      // 这是给 React 打包用的
-      NODE_ENV: JSON.stringify('development')
-    }
+    __PROD__: false
   }),
 
   new MiniCssExtractPlugin({ filename: '[name].css' })

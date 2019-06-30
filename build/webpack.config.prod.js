@@ -2,7 +2,6 @@ const path = require('path')
 const webpack = require('webpack')
 const config = require('./webpack.config.base')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const rucksack = require('rucksack-css')
 const autoprefixer = require('autoprefixer')
@@ -51,15 +50,6 @@ config.module.rules.push(
 
 // 代码分块
 config.optimization = {
-  minimizer: [
-    new UglifyJsPlugin({
-      parallel: true,
-      uglifyOptions: {
-        // eslint-disable-next-line camelcase
-        keep_fnames: true
-      }
-    })
-  ],
   splitChunks: {
     chunks: 'all',
     minChunks: 1,
@@ -123,12 +113,8 @@ config.plugins.push(
     // ================================
     // 配置开发全局常量
     // ================================
-    __DEV__: true,
-    __PROD__: false,
-    'process.env': {
-      // 这是给 React 打包用的
-      NODE_ENV: JSON.stringify('production')
-    }
+    __DEV__: false,
+    __PROD__: true
   }),
   new MiniCssExtractPlugin({ filename: '[name].[contenthash:6].css' })
 )
