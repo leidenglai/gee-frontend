@@ -1,5 +1,5 @@
-import AppMain from 'containers/main'
-import testTpl from './tpl/test.html'
+import AppMain from 'src/containers/main'
+import testTpl from './tpl/test.tpl.html'
 import './style.less'
 
 /**
@@ -20,7 +20,7 @@ class DatasetsPage extends AppMain {
     // 请求初始数据，初始化页面等
 
     // 加载模版
-    const testHtml = testTpl({
+    const testHtml = testTpl<{ title: string; list: string[]; tplFunc?: TemplateExecutor }>({
       title: 'Test ',
       list: ['1', '2', '3']
     })

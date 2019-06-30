@@ -4,13 +4,13 @@
     "paths": {
       "src/*": ["src/*"],
       "assets/*": ["src/assets/*"],
+      "interfaces/*": ["src/interfaces/*"],
       "containers/*": ["src/containers/*"],
       "utils/*": ["src/utils/*"],
-      "HOC/*": ["src/HOC/*"],
-      "stores/*": ["src/stores/*"],
       "services/*": ["src/services/*"],
       "tpl/*": ["src/tpl/*"],
-      "components/*": ["src/components/*"]
+      "components/*": ["src/components/*"],
+      "static/*": ["static/*"]
     },
     "experimentalDecorators": true
   },

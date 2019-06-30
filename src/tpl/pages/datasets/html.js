@@ -6,4 +6,8 @@ module.exports = layout
     title: 'Datasets Page',
     description: 'SEO 数据集'
   })
-  .run(content())
+  .run(
+    content({
+      name: 'datasets'
+    })
+  )

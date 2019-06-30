@@ -6,4 +6,8 @@ module.exports = layout
     title: 'Algorithm Page',
     description: 'SEO 算法页'
   })
-  .run(content())
+  .run(
+    content({
+      name: 'algorithm'
+    })
+  )

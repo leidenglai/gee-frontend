@@ -6,4 +6,8 @@ module.exports = layout
     title: 'Sign Up',
     description: 'SEO 注册'
   })
-  .run(content())
+  .run(
+    content({
+      name: 'signup'
+    })
+  )
