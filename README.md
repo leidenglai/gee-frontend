@@ -62,7 +62,6 @@ npm run build
       css/// css、less文件位置
       images/// 图片文件目录
     components/// 组件目录
-    constants/// 常量配置、前端存放的一些不变的json数据等
     containers/ // 项目主要逻辑 模块控制器
     libs/// 自己引用的一些库
 	  locales/ // 多语言文件
@@ -71,20 +70,20 @@ npm run build
     utils/// 自己写的一些中间件、插件方法等
     config.js// 项目的配置
     index.js// 项目入口
-    routes.js// 路由配置
 — .babelre// babel插件的配置文件
 — package.json  // 项目描述文件
 — README.md // 项目文档
+- build-config.js // 开发的webpack的配置
 ```
 
-通过配置了 webpack 的 alias 参数，可以在包引用时简写路径如 src/assets/css/index.less 可以简写为 css/index.less
-再通过 extensions 配置可以省略后缀名 css/index
+通过配置了 webpack 的 alias 参数，可以在包引用时简写路径如 src/assets/css/index.less 可以简写为 assets/css/index.less
+再通过 extensions 配置可以省略后缀名 assets/css/index
 
 具体配置请看 /build/webpack.config.base.js 中的 resolve 字段
 
 ## 项目开始
 
-本项目使用了 npm 作为包管理工具，同时项目采用多入口，所以每一个模块都有一个入口文件。入口都放在/containers/\*，每一个文件夹代表一个模块。
+本项目使用了 npm 作为包管理工具，同时项目采用多入口，所以每一个模块都有一个入口文件。js 入口都放在/containers/\*，html 模板放在 tpl/pages 中，每一个文件夹代表一个 html 模块，开发模式需要在根目录下的 build-config.js 配置可用模块，打包线上文件会构建全部模块。
 
 Windows 下使用 cmd，mac 启动 terminal。cd 到项目目录，然后执行`npm install`安装项目下的所有的依赖包，执行此命令 安装 package.json 中 devDependencies（开发环境）和 dependencies（生产环境）中的所有依赖包。
 
@@ -95,9 +94,9 @@ npm start 执行 build/dev.js，启动 webpack 构建开发环境等等。通过
 
 ### 入口文件
 
-入口文件的 配置逻辑在 webpack 的 build/utils/中，js 入口 src/containers/\* ，每一个文件夹代表一个模块。
-
-所有的入口文件的导出都应该实例化导出
+入口文件的配置逻辑在根目录下的 build-config.js 中，js 入口 src/containers/\* ，每一个文件夹代表一个模块。
+继承 AppMain，做了一些全局初始化操作，如果后续业务有全局的逻辑也要放在里面。
+所有的入口文件都应该实例化导出
 
 ```javascript
 class SignPage {
