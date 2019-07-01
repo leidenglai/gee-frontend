@@ -6,4 +6,8 @@ module.exports = layout
     title: 'About Page',
     description: 'SEO 关于我们'
   })
-  .run(content())
+  .run(
+    content({
+      name: 'about'
+    })
+  )

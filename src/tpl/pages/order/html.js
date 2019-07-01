@@ -6,4 +6,8 @@ module.exports = layout
     title: 'Order Page',
     description: 'SEO 订单'
   })
-  .run(content())
+  .run(
+    content({
+      name: 'order'
+    })
+  )

@@ -6,4 +6,8 @@ module.exports = layout
     title: 'Log In',
     description: 'SEO 登陆'
   })
-  .run(content())
+  .run(
+    content({
+      name: 'login'
+    })
+  )

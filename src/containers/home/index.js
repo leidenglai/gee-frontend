@@ -6,7 +6,7 @@ import './style.less'
  */
 class HomePage extends AppMain {
   constructor() {
-    super()
+    super({ name: 'home' })
 
     this.init()
     this.bind()

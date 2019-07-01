@@ -6,7 +6,7 @@ import './style.less'
  */
 class OrderPage extends AppMain {
   constructor() {
-    super()
+    super({ name: 'order' })
 
     this.init()
     this.bind()

@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": ".",
+    "paths": {
+      "src/*": ["src/*"],
+      "assets/*": ["src/assets/*"],
+      "interfaces/*": ["src/interfaces/*"],
+      "containers/*": ["src/containers/*"],
+      "utils/*": ["src/utils/*"],
+      "services/*": ["src/services/*"],
+      "tpl/*": ["src/tpl/*"],
+      "components/*": ["src/components/*"],
+      "static/*": ["static/*"]
+    },
+    "target": "es2017",
+    "lib": ["es6", "es7", "dom", "dom.iterable"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "module": "ESNext",
+    "noImplicitAny": false,
+    "experimentalDecorators": true,
+    "typeRoots": ["node_modules/@types"]
+  },
+  "exclude": ["node_modules", "dist"],
+  "include": ["src"],
+  "compileOnSave": false
+}
