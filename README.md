@@ -48,7 +48,6 @@ npm run build
 - UIKit U 库： [UIKit](https://getuikit.com/docs/introduction)
 - Lodash.js 中文文档： http://www.css88.com/doc/lodash/
 - Less: [{less}](http://less.bootcss.com/)http://less.bootcss.com/
-- flexible: [GitHub - amfe/lib-flexible: 可伸缩布局方案](https://github.com/amfe/lib-flexible)
 - 多语言库 i18next： [i18next](https://www.i18next.com/overview/getting-started)
 
 ### 目录结构
