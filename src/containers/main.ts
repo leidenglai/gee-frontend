@@ -21,7 +21,7 @@ export default class AppMain {
   name: string
   }) {
     // 保存根节点
-    this.moduleDomElem = document.querySelector(`.app-container-${options.name}`)
+    this.moduleDomElem = document.querySelector(`.app-container-${options.name}`) as HTMLElement
     this.moduleDom = $(this.moduleDomElem)
 
     UIkit.use(Icons)

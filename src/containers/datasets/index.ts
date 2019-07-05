@@ -1,5 +1,8 @@
 import AppMain from 'src/containers/main'
+import table from './tpl/table.tpl.html'
 import testTpl from './tpl/test.tpl.html'
+import userService from 'src/services/userService'
+import { ITest } from 'src/interfaces/order'
 import './style.less'
 
 /**
@@ -18,14 +21,24 @@ class DatasetsPage extends AppMain {
    */
   init() {
     // 请求初始数据，初始化页面等
-
-    // 加载模版
-    const testHtml = testTpl<{ title: string; list: string[]; tplFunc?: TemplateExecutor }>({
-      title: 'Test ',
-      list: ['1', '2', '3']
+    userService.fetchServTest().then(res => {
+      // 服务端返回数据
+      console.log(res)
     })
 
-    this.moduleDom.find('.test-card-box').html(testHtml)
+    const data = {
+      title: '2222222',
+      list: ['1', '2', '3']
+    }
+    // 加载模版
+    const testHtml = testTpl<ITest>(data)
+
+    // this.moduleDom.find('.test-card-box').html(testHtml)
+
+    const tableHtml = table<ITest>({ title: 'aa', data: testHtml })
+    const tableHtml2 = table()
+
+    this.moduleDom.find('.test-card-box').html(tableHtml)
   }
 
   /**

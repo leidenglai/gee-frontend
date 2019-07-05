@@ -17,6 +17,7 @@
     "lib": ["es6", "es7", "dom", "dom.iterable"],
     "allowJs": false,
     "skipLibCheck": true,
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,

@@ -8,7 +8,8 @@ const __DEV__: boolean
  * https://www.lodashjs.com/docs/latest#_templatestring-options
  **/
 interface TemplateExecutor {
-  <T extends object>(data?: T): string
+  <T extends object>(data: T): string
+  (): string
 }
 
 declare module '*.tpl.html' {
@@ -37,7 +38,7 @@ declare module '*.tpl.html' {
    * ```
    * 最终eleHtml字符串为：`<div>Hello World!!</div><div>模版逻辑判断输出</div>`
    **/
-  const templateExecutor: <T extends object>(data?: T) => string
+  const templateExecutor: TemplateExecutor
 
   export default templateExecutor
 }
