@@ -40,8 +40,7 @@ module.exports = {
           {
             loader: 'underscore-template-loader',
             options: {
-              attributes: [],
-              engine: 'lodash',
+              engine: 'underscore',
               prependFilenameComment: __dirname
             }
           }
