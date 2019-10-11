@@ -70,7 +70,7 @@
     "@babel/runtime": "^7.4.3",
     "classnames": "^2.2.6",
     "jquery": "^3.4.1",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.13",
     "query-string": "^5.1.1",
     "uikit": "^3.1.6",
     "whatwg-fetch": "^3.0.0"
