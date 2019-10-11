@@ -34,6 +34,15 @@ config.module.rules.push(
     ]
   },
   {
+    test: /\.css$/,
+    include: /node_modules/,
+    use: [
+      'style-loader',
+      MiniCssExtractPlugin.loader,
+      'css-loader'
+    ]
+  },
+  {
     test: /\.less$/,
     loader: [
       'style-loader',

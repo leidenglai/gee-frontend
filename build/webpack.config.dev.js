@@ -26,6 +26,14 @@ config.module.rules.push(
     ]
   },
   {
+    test: /\.css$/,
+    include: /node_modules/,
+    use: [
+      'style-loader',
+      'css-loader'
+    ]
+  },
+  {
     test: /\.less$/,
     use: [
       'style-loader',
